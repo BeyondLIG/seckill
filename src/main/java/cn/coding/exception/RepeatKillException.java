@@ -1,0 +1,15 @@
+package cn.coding.exception;
+
+/**
+ * 重复秒杀是运行期异常，不需要手动try catch
+ * Mysql只支持运行期异常的回滚操作
+ */
+public class RepeatKillException extends SeckillException{
+    public RepeatKillException(String message){
+        super(message);
+    }
+
+    public RepeatKillException(String message, Throwable cause){
+        super(message, cause);
+    }
+}
